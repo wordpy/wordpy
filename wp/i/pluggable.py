@@ -1821,7 +1821,7 @@ def wp_hash_password( password):
   @return string The hash string of the password
 
   pythonhosted.org/passlib/lib/passlib.hash.phpass.html
-  sudo python3.5 -m pip install passlib
+  sudo python3 -m pip install passlib
   '''
   #global $wp_hasher
   #if empty($wp_hasher):

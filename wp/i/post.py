@@ -1,5 +1,5 @@
-#!/usr/bin/python3.5
-# vi /usr/local/lib/python3.5/dist-packages/wordpress_xmlrpc/wordpress.py
+#!/usr/bin/python3
+# vi /usr/local/lib/python3/dist-packages/wordpress_xmlrpc/wordpress.py
 from   datetime    import datetime
 import pyx.php     as Php
 import wpy.time    as wTm
@@ -29,7 +29,7 @@ EnableFuturePostStatus = False
 
 #class PostC:  #Post Class variables are shared among class instances
 #  Bj = Exit = XmlCli = BDB = None
-#  # /usr/local/lib/python3.5/dist-packages/wordpress_xmlrpc/methods/posts.py
+#  # /usr/local/lib/python3/dist-packages/wordpress_xmlrpc/methods/posts.py
 def IniXmlMethods():
   WpC.WB.Bj.XmlMethods = ['GetPosts', 'GetPost', 'NewPost', 'EditPost',
          'DeletePost' , 'GetPostStatusList', 'GetPostFormats' , 'GetPostTypes',

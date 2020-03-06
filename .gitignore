@@ -1,0 +1,17 @@
+# The ending slash indicates it is a directory and will ignore any files beneath it.
+__pycache__/
+
+# https://github.com/github/gitignore/blob/master/Python.gitignore
+*.py[cod]
+*$py.class
+# C extensions
+#*.so
+pyx/*.pyx
+pyx/*.c
+# Jupyter Notebook
+.ipynb_checkpoints/
+#
+# Unit test / coverage reports
+
+build/
+venv/

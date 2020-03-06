@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # Fixed all &value pass by reference
 from datetime import datetime
 import re
@@ -19,7 +19,7 @@ array = Php.array
 #    for Module in (WpT, WiM, WiU, WiO, WpTx):
 #      Module.wpdb = self.Wj.wpdb
 
-# python3.5 -i -c "import wpy.web as Web; B = Web.BlogCls(12, WebConf=True)
+# python3 -i -c "import wpy.web as Web; B = Web.BlogCls(12, WebConf=True)
 #     import wp.i.user as WiU;
 # WiU.wpmu_delete_user(26834)
 
@@ -31,7 +31,7 @@ array = Php.array
 #      calling classmethod needs additional memory than staticmethod or function
 #  '''
 #  Sj = Bj = Exit = XmlCli = GDB = SDB = WC0 =None #Sj, not Bj for Users
-#  # /usr/local/lib/python3.5/dist-packages/wordpress_xmlrpc/methods/users.py
+#  # /usr/local/lib/python3/dist-packages/wordpress_xmlrpc/methods/users.py
 def IniXmlMethods():
   WpC.WB.Bj.XmlMethods = ['GetUsers', 'GetUser', 'GetProfile', 'EditProfile',
                           'GetUserInfo', 'GetUsersBlogs', 'GetAuthors',]

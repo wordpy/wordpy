@@ -2220,7 +2220,7 @@ class wpdb_cls(Php.stdClass):
     @param string string String to check.
     @return bool True if ASCII, False if not.
     '''
-    if Php.function_exists( 'mb_check_encoding' ): #from nlp.unicode.IsAscii
+    if Php.function_exists( 'mb_check_encoding' ): #from pyx.unicode.IsAscii
       if Php.mb_check_encoding( string, 'ASCII' ):
         return True
     #elif  not Php.preg_match( '/[^0x00-0x7F]/', string ):

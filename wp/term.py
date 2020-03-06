@@ -1,10 +1,10 @@
-#!/usr/bin/python3.5
-# vi /usr/local/lib/python3.5/dist-packages/wordpress_xmlrpc/wordpress.py
+#!/usr/bin/python3
+# vi /usr/local/lib/python3/dist-packages/wordpress_xmlrpc/wordpress.py
 from   wordpress_xmlrpc import WordPressTerm
 import pyx.php     as Php
 import pyx.type    as xTp
-import nlp.format  as Fmt
-import nlp.unicode as UC
+import pyx.format  as Fmt
+import pyx.unicode as UC
 import wpy.xmlcli  as XmlC       # Xml Client Class
 import wp.conf     as WpC
 import wp.i.format as WiF
@@ -390,7 +390,7 @@ def InsertTermIfNotExist(Tax, TName, slug=None):  #, Return='WordpyTermC'):
       assert TermObj.name == TName
       if not getattr(TermObj, 'term_group', ''):
         TermObj.term_group = 0   # term_group default to 0!!
-        # select * from wp_8500_terms where term_group != 0; Out: Empty set
+        # select * from wp_terms where term_group != 0; Out: Empty set
       if not getattr(TermObj, 'parent', ''):
         TermObj.parent = 0   # parent default to 0!!
       if not getattr(TermObj, 'term_group', ''):
@@ -434,7 +434,7 @@ def InsertTermIfNotExist(Tax, TName, slug=None):  #, Return='WordpyTermC'):
 # wpdb.get_term_by term= <Php.Object(stdClass)> (9) = [ (term_id : 177585), (name : 世界500强), (slug : shi-jie-500-qiang), (term_group : 0), (term_taxonomy_id : 177582), (taxonomy : post_tag), (description : ), (parent : 0), (count : 2) ]
 # wpdb.get_term_by term.term_id= 177585
 #
-# import nlp.unicode as UC
+# import pyx.unicode as UC
 # UC.StrQ2B('世界５００强')              #Out: '世界500强'
 # UC.StrQ2B('世界５００强')=='世界500强' #Out: True
 

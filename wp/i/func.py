@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 import re
 #import wp.rss  as WpR    # no need to use wp.rss, use phpserialize.py in:
 import pyx.func      as xFn

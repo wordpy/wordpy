@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 from collections import OrderedDict as ODict
 import wpy.host  as HO
 cHL, cHO, xHL, xHR = HO.cHL, HO.cHO, HO.xHL, HO.xHR
@@ -8,7 +8,6 @@ cHL, cHO, xHL, xHR = HO.cHL, HO.cHO, HO.xHL, HO.xHR
    - xHR contains os or sys functions & vars for host_rem = remote host. '''
 
 H000002, H000104 = cHO.H000002, cHO.H000104
-H101032b = cHO.H101032b  # = 'pa32b'
 WPfx = 'wp_'   # = wp prefix for ALL WordPy sites
 # WPfx can be changed, but Constant C.WPfx cannot be changed
 
@@ -276,16 +275,16 @@ SiteOD = ODict([   #site_id = the network of Sites or BlogOD
 
 BlogOD = ODict([    # blog_id = the sites (formerly known as blogs)
   # BId, SId, BName=SubSite,BMapDoms,      BU.Id,BU.UPass
-  (   1, ( 1, None        , ('cnw','enw'),1001,)),#wpy#BTitle='WordPy' =BName
+  (   1, ( 1, None        , ('enw',),1001,)),#wpy#BTitle='WordPy' =BName
   (   2, ( 1, 'shop'      , None    ,)),  # wpy  #BTitle='Online Shop'
   (2000, (20, None        , None    ,)),  # wdp = wordpress.com
 ])
 
-CnSites = (2,82,83)
+CnSites = ()
 def IsCnSite(SId):
   return SId in CnSites
 
-CnBlogs = (10,11,12,200,201,203,4001,4002,4003,4004,8151,8200,8300,8500,)
+CnBlogs = ()
 def IsCnBlog(BId):
   return BId in CnBlogs
 

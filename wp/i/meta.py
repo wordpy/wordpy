@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # Fixed all &value pass by reference
 import pyx.func    as xFn
 import pyx.php     as Php

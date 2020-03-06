@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 from wordpress_xmlrpc.wordpress       import WordPressOption
 from wordpress_xmlrpc.methods         import options
 from wordpress_xmlrpc.methods.options import GetOptions, SetOptions
@@ -26,7 +26,7 @@ def wp_installing():
 #class OptionC:  #Post Class variables are shared among class instances
 #  "Change from WDB to BDB since option table in TbsBlog ~= TbsBlogWp"
 #  Bj = Exit = XmlCli = BDB = None
-#  # /usr/local/lib/python3.5/dist-packages/wordpress_xmlrpc/methods/posts.py
+#  # /usr/local/lib/python3/dist-packages/wordpress_xmlrpc/methods/posts.py
 def IniXmlMethods():
   WpC.WB.Bj.XmlMethods = ['GetOptions', 'SetOptions',]
 

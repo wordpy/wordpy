@@ -3,28 +3,28 @@ WordPress PHP translated to pure native Python. Optimized to manage data, users,
 
 
 # Installation
+```
 cd ~
 git clone https://github.com/wordpy/wordpy.git
 cd  wordpy   # =  cd ~/wordpy
 vi  config/host.py config/db.py # search for '#TODO' and change its config 
-
+```
 
 ## There are 4 ways to create the initial blog or global database tables:
 1)   Do it in WordPress
 
 2~4) below
-
+```
 ipython -i -c "import wpy.web_deploy as WD"
 >>> DBlog = WD.DeployBlogCls(1, ConnSsh=False)
 >>> DBlog.CreateDb_GrantUser()
+```
 
 2) DBlog.CreateBlog()  # uses: DBlog.WH0.Exec("wp wpy-site create --path=...")
 3) DBlog.BDB.Exec(<SQL from wp-admin/includes/schema.php>)
 4) DBlog.CreateBlogSa() below using SqlAlchemy
-   ipython -i -c "import wpy.web_deploy as WD"
-   > DBlog = WD.DeployBlogCls(1, ConnSsh=False)
-   > DBlog.CreateBlogSa()   # or:  WpModels, Db = DBlog.CreateBlogSa()
 
+```
 >>> DBlog.CreateBlogSa()
 
 mysql
@@ -53,10 +53,12 @@ mysql
 | wp_users              |
 +-----------------------+
 18 rows in set (0.001 sec)
+```
 
 
-# You can Deploy WordPress sites by:
+# Later on, you can Deploy WordPress sites by:
 
+```
 DSite = WD.DeploySiteCls(1, cHO.H100003)
 DSite.DownloadWp()
 DSite.SetupWDoc()
@@ -64,26 +66,30 @@ DSite.InstallAllThemes()
 DSite.InstallAllPlugins()
 DSite.WrapUpWDeploy()
 DSite.DomainMapping()
+```
 
 
 ## Later on, you can activate Plugins and Themes to your Blog
-
+```
 >>> DBlog.BlogActivatePlugin(Slug='bp')
 >>> DBlog.BlogActivateTheme(Slug=None)
 >>> DBlog.UpdateBlogDesc()
 ...
+```
 
 
 
-ipython -i -c "from wpy.web import WB"
->>> WB.GetBlogObjWpObj(1)
->>> WB.Bj.BDB.Exec('show databases')
-Out: (<wpy.web.BlogCls at 0x7fcaa37e2e48>, <wpy.web.WpCls at 0x7fcac38998d0>)
-
+# Now you can play with your new Blog
 
 In WordPress, you can have network of sites (Sites).
 Each Site can have many Blogs.
 As you can see below, every blog is store in a Blog Object (Bj).
+
+```
+ipython -i -c "from wpy.web import WB"
+>>> WB.GetBlogObjWpObj(1)
+>>> WB.Bj.BDB.Exec('show databases')
+Out: (<wpy.web.BlogCls at 0x7fcaa37e2e48>, <wpy.web.WpCls at 0x7fcac38998d0>)
 
 >>> WB.BId
 Out: 1
@@ -261,11 +267,11 @@ Out:
 >>> post['post_title'] = 'WordPy -- WordPress PHP translated to pure Python.'
 >>> import wp.i.post as WiP
 >>> WiP.wp_insert_post(post)
-
+```
 
 Later on, you can deploy more blogs and switch between Blogs with ease.
-
+```
 vi wp/conf.py                    # change SiteOD and BlogOD, etc
 vi config/host.py config/db.py   # change accordingly
-
+```
 
